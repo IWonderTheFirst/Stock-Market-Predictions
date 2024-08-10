@@ -8,7 +8,7 @@ def lstm_model_1(input_shape):  # Base model, rmse=6
     model = Sequential([
         LSTM(128, return_sequences=True, input_shape=input_shape),
         LSTM(64, return_sequences=False),
-        Dense(25, activation="relu"),
+        Dense(25),
         Dense(1)
     ])
     model.compile(optimizer='adam', loss='mean_absolute_error')
